@@ -3,7 +3,7 @@
 //Global Variable Declaration
 int selectedItems=0, total=0;
 
-//Creating Structures for items for menu and orders for bill
+//Creating Structures for items of menu and orders for bill
 struct items{
     char name[20];
     int price;
