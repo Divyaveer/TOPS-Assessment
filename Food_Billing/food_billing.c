@@ -1,7 +1,9 @@
 #include<stdio.h>
 #include<string.h>
+//Global Variable Declaration
 int selectedItems=0, total=0;
 
+//Creating Structures for items for menu and orders for bill
 struct items{
     char name[20];
     int price;
@@ -13,9 +15,11 @@ struct orders{
 } order[100];
 
 int main() {
+    //Variable Declaration
     int choice;
     char conti;
 
+    //Putting items to the Menu
     strcpy(item[0].name, "Pizza");
     strcpy(item[1].name, "Burger");
     strcpy(item[2].name, "Dosa");
@@ -37,6 +41,7 @@ int main() {
     item[8].price = 200;
 
     do{
+        //Menu
         printf("\n*************************************************************************************************************************");
         printf("\n\t\t\t\t\t\t\t\tMENU \t\t\t");
         printf("\n*************************************************************************************************************************\n");
@@ -57,6 +62,7 @@ int main() {
         printf("Enter what you want to Eat (Enter Index of each you want to purchase one by one) : ");
         scanf("%d", &choice);
 
+        //Adding items to the cart
         if(choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5 || choice == 6 || choice == 7 || choice == 8 || choice == 9){
             printf("\nYou have selected %s.\n", item[choice-1].name);
             printf("Enter the Quantity : ");
@@ -79,6 +85,7 @@ int main() {
         if(conti == 'y'){
             continue;
         }else{
+            //Billing
             printf("\n**********************************************************************************************************************************************************************");
             printf("\n\t\t\t\t\t\t\t\tBill\t\t\t");
             printf("\n*********************************************************************************************************************************************************************\n");
